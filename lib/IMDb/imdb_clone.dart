@@ -97,85 +97,92 @@ class _IMDbCloneState extends State<IMDbClone> {
                               height: 180,
                             ),
                           ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.only(top: 17.0,left: 20.0),
-                                child: Row(
-                                  children: [
-                                    Padding(
-                                      padding: const EdgeInsets.only(right: 10.0),
-                                      child: Container(
-                                        child:  const Padding(
-                                          padding: EdgeInsets.symmetric(horizontal: 10.0,vertical: 7),
-                                          child: Text("Action",style: TextStyle(color: Colors.white),),
-                                        ),
-                                        decoration:BoxDecoration(
-                                          border: Border.all(
-                                            color: Colors.grey,
-                                          ),
-                                          borderRadius: BorderRadius.circular(3)
-                                        ) ,
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(right: 10.0),
-                                      child: Container(
-                                        child:  const Padding(
-                                          padding:EdgeInsets.symmetric(horizontal: 10.0,vertical: 7),
-                                          child: Text("Crime",style: TextStyle(color: Colors.white),),
-                                        ),
-                                        decoration:BoxDecoration(
-                                            border: Border.all(
-                                              color: Colors.grey,
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 17.0,left: 20.0),
+                                  child: Expanded(
+                                    child: SingleChildScrollView(
+                                      scrollDirection: Axis.horizontal,
+                                      child: Row(
+                                        children: [
+                                          Padding(
+                                            padding: const EdgeInsets.only(right: 10.0),
+                                            child: Container(
+                                              child:  const Padding(
+                                                padding: EdgeInsets.symmetric(horizontal: 10.0,vertical: 7),
+                                                child: Text("Action",style: TextStyle(color: Colors.white),),
+                                              ),
+                                              decoration:BoxDecoration(
+                                                border: Border.all(
+                                                  color: Colors.grey,
+                                                ),
+                                                borderRadius: BorderRadius.circular(3)
+                                              ) ,
                                             ),
-                                            borderRadius: BorderRadius.circular(3)
-                                        ) ,
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(right: 10.0),
-                                      child: Container(
-                                        child:  const Padding(
-                                          padding: EdgeInsets.symmetric(horizontal: 10.0,vertical: 7),
-                                          child: Text("Drama",style: TextStyle(color: Colors.white),),
-                                        ),
-                                        decoration:BoxDecoration(
-                                            border: Border.all(
-                                              color: Colors.grey,
-                                            ),
-                                            borderRadius: BorderRadius.circular(3)
-                                        ) ,
-                                      ),
-                                    ),
-                                    Container(
-                                      child:  const Padding(
-                                        padding: EdgeInsets.symmetric(horizontal: 10.0,vertical: 7),
-                                        child: Text("Mystery",style: TextStyle(color: Colors.white),),
-                                      ),
-                                      decoration:BoxDecoration(
-                                          border: Border.all(
-                                            color: Colors.grey,
                                           ),
-                                          borderRadius: BorderRadius.circular(3)
-                                      ) ,
+                                          Padding(
+                                            padding: const EdgeInsets.only(right: 10.0),
+                                            child: Container(
+                                              child:  const Padding(
+                                                padding:EdgeInsets.symmetric(horizontal: 10.0,vertical: 7),
+                                                child: Text("Crime",style: TextStyle(color: Colors.white),),
+                                              ),
+                                              decoration:BoxDecoration(
+                                                  border: Border.all(
+                                                    color: Colors.grey,
+                                                  ),
+                                                  borderRadius: BorderRadius.circular(3)
+                                              ) ,
+                                            ),
+                                          ),
+                                          Padding(
+                                            padding: const EdgeInsets.only(right: 10.0),
+                                            child: Container(
+                                              child:  const Padding(
+                                                padding: EdgeInsets.symmetric(horizontal: 10.0,vertical: 7),
+                                                child: Text("Drama",style: TextStyle(color: Colors.white),),
+                                              ),
+                                              decoration:BoxDecoration(
+                                                  border: Border.all(
+                                                    color: Colors.grey,
+                                                  ),
+                                                  borderRadius: BorderRadius.circular(3)
+                                              ) ,
+                                            ),
+                                          ),
+                                          Container(
+                                            child:  const Padding(
+                                              padding: EdgeInsets.symmetric(horizontal: 10.0,vertical: 7),
+                                              child: Text("Mystery",style: TextStyle(color: Colors.white),),
+                                            ),
+                                            decoration:BoxDecoration(
+                                                border: Border.all(
+                                                  color: Colors.grey,
+                                                ),
+                                                borderRadius: BorderRadius.circular(3)
+                                            ) ,
+                                          ),
+                                        ],
+                                      ),
                                     ),
-                                  ],
-                                ),
-                              ),
-                              const SizedBox(
-                                width: 300,
-                                child: Padding(
-                                  padding: EdgeInsets.only(top: 20,left: 20.0,right: 10),
-                                  child: Text("When the Riddler, a sadistic serial killer, begins murdering key political figures in Gotham, Batman is forced to investigate the city's hidden corruption and question his family's involvement.",
-                                  style: TextStyle(color: Colors.white),
-                                    maxLines: 4,
-                                    overflow: TextOverflow.ellipsis,
                                   ),
                                 ),
-                              )
-                            ],
+                                const SizedBox(
+                                  width: 300,
+                                  child: Padding(
+                                    padding: EdgeInsets.only(top: 20,left: 20.0,right: 10),
+                                    child: Text("When the Riddler, a sadistic serial killer, begins murdering key political figures in Gotham, Batman is forced to investigate the city's hidden corruption and question his family's involvement.",
+                                    style: TextStyle(color: Colors.white),
+                                      maxLines: 4,
+                                      overflow: TextOverflow.ellipsis,
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
                           )
                         ],
                       ),
@@ -343,7 +350,7 @@ class _IMDbCloneState extends State<IMDbClone> {
 }
 Widget castItem(Cast cast)=>
     Container(
-      width: 110,
+      width: 130,
       clipBehavior: Clip.antiAliasWithSaveLayer,
       decoration: BoxDecoration(
         color: Colors.grey[850],
