@@ -1,8 +1,11 @@
 import 'package:clone/IMDb/imdb_clone.dart';
 import 'package:clone/WhatsApp/layout.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(
+      const SystemUiOverlayStyle(statusBarColor: Color.fromRGBO(109, 126, 134,0)));
   runApp(const MyApp());
 }
 
